@@ -1,0 +1,30 @@
+img{
+    width: 35vw;
+}
+body{
+    margin: 0;
+    padding-left: 10vw;
+    background-color: aqua;
+    width: 80vw;
+}
+.main , .bihar{
+    width: 85vw;
+    overflow-x: scroll;
+    
+}
+.india{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.active, .recovered, .confirmed, .deaths, .lastupdatedtime{
+    width: 300px;
+    height: auto        ;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}

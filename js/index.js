@@ -1,3 +1,4 @@
+const India = document.querySelector('.india')
 const main = document.querySelector('.main');
 const table = document.createElement('table')
 main.appendChild(table);
@@ -27,13 +28,66 @@ th6.innerHTML='lastupdatedtime'
 
 const Bihar = document.querySelector('.bihar');
 const table1 = document.createElement('table')
-main.appendChild(table1);
-// const tr1 = document.createElement('tr')
-// table1.appendChild(tr1);
+Bihar.appendChild(table1);
+const tr1 = document.createElement('tr')
+table1.appendChild(tr1);
+const ths2 = document.createElement('th')
+const ths3 = document.createElement('th')
+const ths4 = document.createElement('th')
+const ths5 = document.createElement('th')
+const ths6 = document.createElement('th')
+tr1.appendChild(ths2);
+tr1.appendChild(ths3);
+tr1.appendChild(ths4);
+tr1.appendChild(ths5);
+tr1.appendChild(ths6);
+ths2.innerHTML='District'
+ths3.innerHTML='Active'
+ths4.innerHTML='Recovered'
+ths5.innerHTML='confirmed'
+ths6.innerHTML='deceased'
 
 
-const india = 'https://api.covid19india.org/data.json';
-fetch(india)
+const url = 'https://api.covid19india.org/data.json';
+
+fetch(url)
+.then(Response => {return Response.json();})
+.then(data => {
+        console.log(data);
+            const td2 = document.createElement('div');
+            td2.classList.add('active');
+            td2.style.backgroundColor = "#ff073a";
+            const td3 = document.createElement('div');
+            td3.classList.add('recovered');
+            td3.style.backgroundColor = "#22803b";
+            const td4 = document.createElement('div');
+            td4.classList.add('confirmed');
+            td4.style.backgroundColor = "#007bff";
+            const td5 = document.createElement('div');
+            td5.classList.add('deaths');
+            td5.style.backgroundColor = "#161625";
+            const td6 = document.createElement('div');
+            td6.classList.add('lastupdatedtime');
+            td6.style.backgroundColor = "#c79811";
+            India.appendChild(td2);
+            India.appendChild(td3);
+            India.appendChild(td4);
+            India.appendChild(td5);
+            India.appendChild(td6);
+            td2.innerHTML='<div>  <h1>Active</h1> <h1> '+data.statewise[0].active+'</h1></div>';
+            td3.innerHTML='<div>  <h1>Recovered</h1> <h1> '+data.statewise[0].recovered+'</h1></div>';
+            td4.innerHTML='<div>  <h1>Confirmed</h1> <h1> '+data.statewise[0].confirmed+'</h1></div>';
+            td5.innerHTML='<div>  <h1>Deaths</h1> <h1> '+data.statewise[0].deaths+'</h1></div>';
+            td6.innerHTML='<div>  <h3>Lastupdatedtime</h3> <h3> '+data.statewise[0].lastupdatedtime+'</h3></div>';
+    });
+
+
+    
+    
+   
+    
+
+fetch(url)
 .then(Response => {return Response.json();})
 .then(data => {
         console.log(data);
