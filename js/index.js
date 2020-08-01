@@ -65,7 +65,7 @@ fetch(url)
             td4.style.backgroundColor = "#007bff";
             const td5 = document.createElement('div');
             td5.classList.add('deaths');
-            td5.style.backgroundColor = "#161625";
+            td5.style.backgroundColor = "#551625";
             const td6 = document.createElement('div');
             td6.classList.add('lastupdatedtime');
             td6.style.backgroundColor = "#c79811";

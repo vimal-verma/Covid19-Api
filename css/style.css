@@ -28,3 +28,9 @@ body{
     justify-content: center;
    
 }
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
