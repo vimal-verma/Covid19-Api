@@ -2,13 +2,13 @@ img{
     width: 35vw;
 }
 body{
-    margin: 0;
+    margin: 10px;
     padding-left: 10vw;
     background-color: aqua;
     width: 80vw;
 }
 .main , .bihar{
-    width: 85vw;
+    width: 86vw;
     overflow-x: scroll;
     
 }
